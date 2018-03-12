@@ -1,0 +1,46 @@
+<skin>
+	<!--NetatmoBar_V5-->
+    <screen backgroundColor="#00000000" flags="wfNoBorder" name="NetatmoBar_V5" position="0,0" size="1920,50" title="Infobar" zPosition="1">
+        <widget alphatest="blend" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="15,10" render="NetatmoPixmap" size="50,30" source="session.Netatmo" zPosition="2" />
+        <widget backgroundColor="#80000000" font="Bold;30" foregroundColor="foreground" halign="left" position="75,0" render="Label" size="180,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">station.module_name</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/temp_indoor.png" position="265,13" size="25,25" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="center" position="300,0" render="Label" size="90,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">station.temperature</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/humidity_indoor.png" position="400,13" size="25,25" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="center" position="435,0" render="Label" size="60,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">station.humidity</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/co2.png" position="535,13" size="25,25" />
+        <widget alphatest="blend" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="565,10" render="NetatmoPixmap" size="30,30" source="session.Netatmo" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="left" position="600,5" render="Label" size="140,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">station.co2</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/sonar.png" position="750,13" size="25,25" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="left" position="785,0" render="Label" size="100,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">station.noise</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/temp_outdoor.png" position="1620,12" size="25,25" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="right" position="1300,0" render="Label" size="310,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">module.temperature?temp unit ( min unit | max unit )</convert>
+        </widget>
+        <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/humidity_outdoor.png" position="1265,13" size="25,25" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="right" position="1195,0" render="Label" size="60,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">module.humidity</convert>
+        </widget>
+        <widget backgroundColor="#80000000" font="Bold;30" foregroundColor="foreground" halign="right" position="1655,0" render="Label" size="180,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">module.module_name</convert>
+        </widget>
+        <widget alphatest="blend" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="1845,10" render="NetatmoPixmap" size="60,30" source="session.Netatmo" zPosition="2" />
+        <widget alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/hyetometer.png" pixtype="rain" position="1035,13" render="NetatmoPixmap" size="25,25" source="session.Netatmo" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="center" position="1065,0" render="Label" size="100,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">rainfall?sum1|sum24 unit</convert>
+        </widget>
+        <widget alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/windy.png" pixtype="wind" position="895,13" render="NetatmoPixmap" size="25,25" source="session.Netatmo" />
+        <widget backgroundColor="#80000000" font="Bold;30" halign="center" position="930,0" render="Label" size="100,50" source="session.Netatmo" transparent="1" valign="center">
+            <convert type="Netatmo">windgauge.wind_strength?value unit</convert>
+        </widget>
+	</screen>
+</skin>
