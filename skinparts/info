@@ -1,3 +1,6 @@
 [
-  "skin_screen_Netatmo_Top.xml",
+  {
+    "name":"skin_screen_Netatmo_Top.xml",
+    "version":"1.0.0"
+  },
 ]
