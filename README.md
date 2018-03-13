@@ -5,6 +5,14 @@ skinparts will only be merged if:
   - you follow the basic Fluid Next UI guidelines
   - no additional graphics are used
   - always provide XML + preview PNG
+  - in your commit include the following template as comment:
+  
+  {
+    "name": "enter the filename",
+    "version":"1.0.0",
+    "author":"your name here"
+  }
+     
   - you follow the Fluid Skinpart naming conventions:
   
   for Screens:
