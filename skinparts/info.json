@@ -1,7 +1,9 @@
-[
-  {
-    "name":"skin_screen_Netatmo_Top.xml",
-    "version":"1.0.0",
-    "author":"hmmmdada"
-  }
-]
+{
+  "skinparts":[
+                {
+                  "name": "skin_screen_Netatmo_Top.xml",
+                  "version":"1.0.0",
+                  "author":"hmmmdada"
+                }
+  ]
+}
