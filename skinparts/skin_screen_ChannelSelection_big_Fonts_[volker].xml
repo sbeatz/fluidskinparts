@@ -1,0 +1,219 @@
+<skin>
+	<screen backgroundColor="windowbg_fullscreen"
+			flags="wfNoBorder"
+			name="ChannelSelection"
+			position="0,0"
+			size="1920,1080"
+			title="Channel Selection"
+			zPosition="0"
+			transparent="0">
+
+
+		<!-- Listenschatten-->
+		<ePixmap pixmap="FluidNext/pictures/channellistshadow.png"
+				 size="20,1080"
+				 position="800,0"
+				 zPosition="0"
+				 alphatest="blend"/>
+		<!-- Titel Bouquet-->
+		<widget font="BoldCap; 45"
+				foregroundColor="white"
+				backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				halign="right"
+				noWrap="1"
+				position="1225,20"
+				zPosition="10"
+				render="FluidNextLabel"
+				size="500,60"
+				source="Title"
+				valign="top">
+			<convert type="FluidNextTextreplace">Kanalliste (TV) Bouquets/</convert>
+			<convert type="FluidNextTextreplace">Kanalliste (TV) User - bouquets/</convert>
+		</widget>
+
+		<!-- Uhrzeit -->
+		<widget backgroundColor="windowbg_fullscreen" 
+				font="Bold; 45" 
+				foregroundColor="#00FFFFFF" 
+				halign="left" 
+				position="1730,20" 
+				render="Label" 
+				size="150,150" 
+				source="global.CurrentTime" 
+				transparent="1" 
+				valign="top" 
+				zPosition="20">
+			<convert type="ClockToText">Format: | %H:%M</convert>
+		</widget>
+
+		<!--Liste-->
+		<widget backgroundColor="windowbg_fullscreen2"
+				transparent="0"
+				colorEventProgressbar="yellow"
+				progressbarBorderWidth="1"
+				colorEventProgressbarSelected="white"
+				colorServiceRecording="white"
+				colorEventProgressbarBorder="grey_light"
+				colorEventProgressbarBorderSelected="accent"
+				colorServiceDescription="white"
+				foregroundColor="white"
+				foregroundColorServiceNotAvail="#009E9E9E"
+				colorServiceWithAdvertisment="#009E9E9E"
+				name="list"
+				position="0,0"
+				size="800,1000"
+				scrollbarMode="showNever"
+				serviceInfoFont="Bold;43"
+				serviceItemHeight="100"
+				serviceNameFont="Regular;30"
+				serviceNumberFont="Bold;39"
+				zPosition="30" />
+
+		<!--Rightpanel-->
+		<eLabel position="800,675" 
+				size="1120,325" 
+				backgroundColor="windowbg_fullscreen2" 
+				zPosition="-5"/>
+
+		<!-- Titel Naechste Sendungen-->
+		<eLabel backgroundColor="windowbg_fullscreen2"
+				transparent="1"
+				font="BoldCap; 39"
+				foregroundColor="foreground"
+		
+				noWrap="1"
+				position="850,685"
+				size="390,40"
+				text="N&#xE4;chste Sendungen"
+				valign="top"
+				zPosition="35" />
+		<!-- Trenner Naechste Sendungen
+		<eLabel 
+				position="650,735"
+				size="420,2"
+				backgroundColor="accent"
+				zPosition="300" />-->
+		<widget backgroundColor="windowbg_fullscreen2"
+				transparent="1"
+				panelfont="Bold;37"
+				foregroundColor="foreground"
+				position="800,735"
+				render="FluidNextEventsWall"
+				size="1120,265"
+				placeholder="1"
+				source="ServiceEvent"
+				itemScale="100"
+				itemSpace="7"
+				maxlines="5"
+				zPosition="-1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+<!-- Titel Primetime-->
+
+<!-- Primetime Content -->
+
+
+
+		
+		<!-- Sendername-->
+		<widget backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				font="Regular; 41"
+				foregroundColor="foreground"
+				halign="left"
+				noWrap="1"
+				position="850,70"
+				render="FluidNextLabel"
+				size="500,50"
+				source="ServiceEvent"
+				valign="top"
+				zPosition="35">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+
+		<!-- Sendungstitel-->
+		<widget backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				font="Bold; 55"
+				foregroundColor="foreground"
+				halign="left"
+					options="movetype=running,startpoint=0,startdelay=3000,oneshot=3000,step=2,steptime=95,always=0,noWrap" 
+				noWrap="1"
+				position="850,110"
+				render="VRunningText"
+				size="1000,70"
+				source="ServiceEvent"
+				valign="top"
+				zPosition="35">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				font="Bold; 39"
+				foregroundColor="foreground"
+				halign="left"
+				position="850,185"
+				render="Label"
+				size="200,50"
+				source="ServiceEvent"
+				valign="top"
+				zPosition="3">
+			<convert type="FluidNextEventTime">StartAndEndTime</convert>
+			<convert type="FluidNextClockToText">%H:%M</convert>
+		</widget>
+		<!-- Sendungsfortschritt-->
+		<widget position="850,225"
+				render="Progress"
+				size="450,8"
+				source="ServiceEvent"
+				backgroundColor="grey_light"
+				foregroundColor="yellow"
+				zPosition="99">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- textfeld fuer Extradaten - nur sichtbar wenn Extradaten vorhanden sind-->
+		<widget backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				foregroundColor="accent"
+				source="ServiceEvent"
+				render="FluidNextLabel"
+				halign="left"
+				valign="center"
+				noWrap="1"
+				zPosition="32"
+				size="1000,40"
+				position="850,620"
+				font="Regular;39">
+			<convert type="FluidNextExtEventName">EventExtraData</convert>
+			<convert type="FluidNextExtraEventData">CATEGORY SERIESINFO SUBTITLE GENRE YEAR COUNTRY AGE</convert>
+		</widget>
+
+		<!-- Sendungsbeschreibung-->
+		<widget backgroundColor="windowbg_fullscreen"
+				transparent="1"
+				font="Regular;43"
+				foregroundColor="#00FFFFFF"
+				halign="left"
+					options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=13000,wrap" 
+				position="850,260"
+				render="VRunningText"
+				size="1000,310"
+				source="ServiceEvent"
+				zPosition="20">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+
+
+
+		<!-- Widgets und Buttons-->
+
+		<constant-widget name="button_bar_full"/>
+        <constant-widget name="button_name_key_red_full"/>
+        <constant-widget name="button_name_key_green_full"/>
+		<constant-widget name="button_name_key_yellow_full"/>
+		<constant-widget name="button_name_key_blue_full"/>
+	</screen>
+
+
+</skin>
