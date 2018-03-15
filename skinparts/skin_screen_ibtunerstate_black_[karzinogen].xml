@@ -1,0 +1,17 @@
+<skin>
+	<screen backgroundColor="#00000000" flags="wfNoBorder" name="TunerState" padding="20" position="center,836" size="1805,40" spacing="15" title="Tuner State" transparent="0" zPosition="1">
+		<widget alphatest="off" backgroundColor="#00000000" name="Background" position="0,0" size="1805,40" transparent="1" zPosition="-1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field0" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field1" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field2" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field3" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field4" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field5" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field6" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field7" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field8" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" font="Regular;30" foregroundColor="foreground" halign="left" name="Field9" noWrap="1" transparent="0" zPosition="1" />
+		<widget backgroundColor="#00000000" borderColor="foreground" borderWidth="2" name="Progress" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" position="0,00" size="80,10" transparent="1" zPosition="1" />
+		<widget name="Type" backgroundColor="#00000000" pixmaps="FluidNext/images/infobar/ibts/rec.png,FluidNext/images/infobar/ibts/stream.png,FluidNext/images/infobar/ibts/finished.png,FluidNext/images/infobar/ibts/info.png" position="0,4" alphatest="blend" size="32,32" zPosition="1" />
+	</screen>
+</skin>

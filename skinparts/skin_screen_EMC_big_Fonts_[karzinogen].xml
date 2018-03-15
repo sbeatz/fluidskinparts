@@ -1,0 +1,55 @@
+<skin>
+	<screen backgroundColor="windowbg_fullscreen" flags="wfNoBorder" name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" transparent="0" zPosition="0">
+		<constant-widget name="clock" />
+		<constant-widget name="button_bar_full" />
+		<constant-widget name="button_name_key_red_full" />
+		<constant-widget name="button_name_key_green_full" />
+		<constant-widget name="button_name_key_yellow_full" />
+		<constant-widget name="button_name_key_blue_full" />
+		<ePixmap alphatest="blend" pixmap="FluidNext/skin_default/buttons/key_epg.png" position="1850,960" size="50,40" zPosition="2" />
+		<ePixmap alphatest="blend" pixmap="FluidNext/skin_default/buttons/key_menu.png" position="1780,960" size="50,40" zPosition="2" />
+		<eLabel backgroundColor="windowbg_fullscreen2" font="FA;40" foregroundColor="white" halign="center" position="10,20" size="100,100" text="&#61515;" valign="center" zPosition="2" />
+		<eLabel backgroundColor="windowbg_fullscreen2" font="BoldCap;30" foregroundColor="white" halign="center" position="100,20" size="450,100" text="Enhanced Movie Center" valign="center" zPosition="2" />
+		<eLabel backgroundColor="windowbg_fullscreen2" position="0,0" size="600,1000" zPosition="1" />
+		<ePixmap alphatest="blend" pixmap="FluidNext/pictures/channellistshadow.png" position="600,0" size="20,1000" zPosition="70" />
+		<ePixmap alphatest="blend" pixmap="FluidNext/pictures/titleshadow.png" position="600,950" size="1320,10" zPosition="3" />
+		<widget backgroundColor="windowbg_fullscreen" font="EventName;38" halign="center" position="760,116" render="Label" size="1000,35" source="Title" transparent="1" valign="center" zPosition="2" />
+		<widget backgroundColor="windowbg_fullscreen" font="Regular;30" halign="center" name="wait" position="600,150" size="1320,800" valign="center" zPosition="10" />
+		<widget CoolBarHPos="19" CoolBarPos="1000" CoolBarSize="120,15" CoolBarSizeSa="120,15" CoolDateColor="1" CoolDateFont="Regular;30" CoolDateHPos="7" CoolDatePos="1130" CoolDateWidth="170" CoolFolderSize="980" CoolFont="Regular;38" CoolHighlightColor="0" CoolMoviePos="35" CoolMovieSize="940" CoolProgressPos="960" CoolSelectFont="Regular;37" CoolTitleColor="1" DefaultColor="foreground" FinishedColor="#46D93A" FrontColorSel="lightpanel" RecordingColor="red" UnwatchedColor="foreground" WatchingColor="#3486F4" backgroundColor="windowbg_fullscreen" foregroundColorSelected="foreground" itemHeight="50" name="list" position="600,150" scrollbarSliderBorderWidth="0" scrollbarWidth="5" size="1310,800" transparent="0" zPosition="3" 
+					backgroundColorRows="windowbg_fullscreen_alt"/>
+		<widget alphatest="blend" position="20,120" render="Cover" size="200,300" source="Service" transparent="1" zPosition="3" />
+		<widget alphatest="blend" position="280,274" render="Picon" size="300,130" source="Service" transparent="1" zPosition="3">
+			<convert type="MovieInfo">Reference</convert>
+		</widget>
+		<widget backgroundColor="windowbg_fullscreen2" font="EventName;42" foregroundColor="foreground" options="movetype=running,startpoint=0,direction=top,steptime=95,repeat=2,startdelay=12000,wrap" position="20,437" render="FluidNextRunningText" size="560,538" source="Service" transparent="1" zPosition="3">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget backgroundColor="windowbg_fullscreen" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="1564,960" render="Label" size="120,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget backgroundColor="windowbg_fullscreen" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="1429,960" render="Label" size="120,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="1300,960" render="Label" size="120,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="ServiceTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M Uhr</convert>
+		</widget>
+		<eLabel backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" position="1244,960" size="100,35" text="-" transparent="1" valign="center" zPosition="4" />
+		<widget backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="1171,960" render="Label" size="120,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M Uhr</convert>
+		</widget>
+		<eLabel backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" position="1159,960" size="14,35" text="|" transparent="1" valign="center" zPosition="4" />
+		<widget backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="991,960" render="Label" size="163,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">Format:%d. %b. %Y</convert>
+		</widget>
+		<eLabel backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" position="1419,960" size="14,35" text="|" transparent="1" valign="center" zPosition="4" />
+		<eLabel backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" position="1549,960" size="14,35" text="|" transparent="1" valign="center" zPosition="4" />
+		<widget backgroundColor="background" font="Regular;35" foregroundColor="white" halign="center" noWrap="1" position="863,960" render="Label" size="129,35" source="Service" transparent="1" valign="center" zPosition="4">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+</skin>
